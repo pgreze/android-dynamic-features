@@ -33,13 +33,15 @@ import com.google.android.play.core.splitinstall.SplitInstallSessionState
 import com.google.android.play.core.splitinstall.SplitInstallStateUpdatedListener
 import com.google.android.play.core.splitinstall.model.SplitInstallSessionStatus
 
-private const val packageName = "com.google.android.samples.dynamicfeatures.ondemand"
-private const val kotlinSampleClassname = "$packageName.KotlinSampleActivity"
-private const val javaSampleClassname = "$packageName.JavaSampleActivity"
-private const val nativeSampleClassname = "$packageName.NativeSampleActivity"
-
 /** Activity that displays buttons and handles loading of feature modules. */
 class MainActivity : AppCompatActivity() {
+
+    companion object {
+        const val packageName = "com.google.android.samples.dynamicfeatures.ondemand"
+        const val kotlinSampleClassname = "$packageName.KotlinSampleActivity"
+        const val javaSampleClassname = "$packageName.JavaSampleActivity"
+        const val nativeSampleClassname = "$packageName.NativeSampleActivity"
+    }
 
     /** Listener used to handle changes in state for install requests. */
     private val listener = SplitInstallStateUpdatedListener { state ->

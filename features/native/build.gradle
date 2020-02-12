@@ -40,5 +40,6 @@ android {
 
 dependencies {
     implementation project(':app')
+    androidTestImplementation project(':app')
 }
 
